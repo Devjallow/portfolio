@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const timestamp = data.timestamp;
             const userId = data.id;
 
-            window.location.href = '/login.html';
+            window.location.href = '/portfolio/login.html';
 
            
         })
