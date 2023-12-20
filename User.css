@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+   width:100%;
+   background:  #10e5a5;
+}
+#search-box{
+    border:2px solid #ffff00;
+    margin-left:373px;
+    gap:0.5rem;
+    width:70%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+.search{
+    width:500px;
+    padding:0.5rem 0;
+
+  
+}
+.search input{
+    border-radius:10px;
+    border:none;
+    width:100px;
+    height:50px;
+    cursor: pointer;
+    width:90%;
+    outline:none;
+}
+img {
+    width:50px;
+}
+#main-container{
+    display:grid;
+    grid-template-columns: minmax(150px, 25%) auto;
+ }
+
+ .right-section {
+    border:2px solid green;
+    background-color:#a510e5;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+ }
+.listing-filter {
+   border:2px solid green;
+   width:40%;
+   margin:0 auto;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+}
+ .left-section {
+    border:2px solid yellow;
+ }
+ #listings {
+    border:3px solid blue;
+    width:70%;
+    margin:0 auto;
+ 
+ }
+ .left-section .listing-container {
+    width:250px;
+    border:2px solid green;
+    border-radius:5px;
+  
+}
+#listings #cards{
+    display: flex;
+    flex-wrap:wrap;
+    gap:7px;
+    padding:0.5rem;
+}
+  
+ 
+ .listing-container .listing-image
+ {
+    background:url(/webstactportfolio.jpg) no-repeat center/cover;
+ }
+ .left-section .list-infor{
+    display:flex;
+    justify-content:space-between;
+ }
+ .left-section .listing-image {
+    height:250px;
+    border:2px solid blue;
+ }
