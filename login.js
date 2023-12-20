@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
            
             console.log('Login successful:', data);
 
-            window.location.href = '/User.html'; 
+            window.location.href = '/portfolio/User.html'; 
         })
         .catch(error => {
           
