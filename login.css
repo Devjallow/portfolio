@@ -1,19 +1,21 @@
 body{
-   background-color:#e5a510;
+   background-color:#333;
+   font-family: 'Arial', 'sans-serif';
+
 }
 .form-container {
     display:flex;
     width:700px;
-    border:2px solid green;
+    border:2px solid #fff;
     margin:5rem auto;
     height: 500px; 
     box-shadow:0px 0px 5px 0px black;  
 }
 .form-grp h2{
     text-align:center;
+    color:#333;
 }
 .form-grp #form-group{
-   
     width:80%;
     margin:0 auto;
 }
@@ -55,9 +57,7 @@ form .form-card button {
 }
 
 .form-container #sign-up {
-    background-color:yellow;
-    border:1px solid green;
-    
+    color:#333;
     background:url(/home6.jpg) no-repeat center/cover; 
 }
 
@@ -69,6 +69,7 @@ form .form-card button {
 .form-container #sign-up p{
     margin-top:2rem;
     text-align:center;
+    font-size:larger;
 }
 .form-container #sign-up .sign-up  {
     width:75%;
@@ -81,5 +82,15 @@ form .form-card button {
     padding:1rem;
     border-radius:20px;
     cursor:pointer;
-    border:none;
+    border:1px solid #fff;
+    background-color:#333;
 }
+#sign-up .sign-up button:hover{
+	background-color:#676161;
+}
+.sign-up button a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:400;
+}
+
