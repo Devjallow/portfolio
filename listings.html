@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Listings</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">Nyumba Jumbo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Container -->
+<div class="container mt-4">
+    <h1>Check out some Listings</h1>
+    <div class="row">
+        <div class="col-3">
+            <div class="card">
+                <img src="./home6.jpg" class="card-img-top" alt="House Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Cozy Cottage</h5>
+                    <p class="card-text">A charming cottage with a beautiful garden and cozy interior.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="location1">Location: Suburbia Heights</li>
+                    <li class="list-group-item" id="rent1">Rent: $1000/month</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img src="./home6.jpg" class="card-img-top" alt="House Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Modern Loft</h5>
+                    <p class="card-text">A stylish loft with contemporary design and stunning city views.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="location2">Location: Urban Heights</li>
+                    <li class="list-group-item" id="rent2">Rent: $1200/month</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img src="./home6.jpg" class="card-img-top" alt="House Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Family Home</h5>
+                    <p class="card-text">A spacious home perfect for families with a large backyard and play area.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="location3">Location: Suburbia Meadows</li>
+                    <li class="list-group-item" id="rent3">Rent: $900/month</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img src="./home6.jpg" class="card-img-top" alt="House Image 4">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury Penthouse</h5>
+                    <p class="card-text">An upscale penthouse with high-end amenities and breathtaking skyline views.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="location4">Location: City Center</li>
+                    <li class="list-group-item" id="rent4">Rent: $1100/month</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Rent Modal -->
+<div class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rentModalLabel">Rent Property</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Review  Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reviewModalLabel">Review Property</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
