@@ -6,10 +6,10 @@
 }
 header{
    width:100%;
-   background:  #10e5a5;
+   background-color:#333;
+   color:#fff;
 }
 #search-box{
-    border:2px solid #ffff00;
     margin-left:373px;
     gap:0.5rem;
     width:70%;
@@ -42,33 +42,33 @@ img {
  }
 
  .right-section {
-    border:2px solid green;
-    background-color:#a510e5;
+    background-color:#333;
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align: center;
  }
 .listing-filter {
-   border:2px solid green;
    width:40%;
    margin:0 auto;
    display: flex;
    justify-content:center;
    align-items:center;
 }
+/*
  .left-section {
     border:2px solid yellow;
- }
+ }*/
+
  #listings {
-    border:3px solid blue;
+   /* border:3px solid blue; */
     width:70%;
     margin:0 auto;
  
  }
  .left-section .listing-container {
     width:250px;
-    border:2px solid green;
+   /* border:2px solid green; */
     border-radius:5px;
   
 }
@@ -90,5 +90,5 @@ img {
  }
  .left-section .listing-image {
     height:250px;
-    border:2px solid blue;
+   /* border:2px solid blue; */
  }
