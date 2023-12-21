@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
 <body>
 
@@ -51,8 +52,17 @@
                     <li class="list-group-item" id="rent1">Rent: $1000/month</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                    <a href="#" class="card-link rent-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#rentModal"
+                       data-house-name="Cozy Cottage"
+                       data-location="Suburbia Heights"
+                       data-rent="$1000/month">Rent</a>
+                    <a href="#" class="card-link review-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#reviewModal"
+                       data-house-name="Cozy Cottage"
+                       data-location="Suburbia Heights">Review</a>
                 </div>
             </div>
         </div>
@@ -69,8 +79,17 @@
                     <li class="list-group-item" id="rent2">Rent: $1200/month</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                    <a href="#" class="card-link rent-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#rentModal"
+                       data-house-name="Modern Loft"
+                       data-location="Urban Heights"
+                       data-rent="$1200/month">Rent</a>
+                    <a href="#" class="card-link review-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#reviewModal"
+                       data-house-name="Cozy Cottage"
+                       data-location="Urban Heights">Review</a>
                 </div>
             </div>
         </div>
@@ -87,8 +106,17 @@
                     <li class="list-group-item" id="rent3">Rent: $900/month</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                    <a href="#" class="card-link rent-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#rentModal"
+                       data-house-name="Family Home"
+                       data-location="Suburbia Meadows"
+                       data-rent="$900/month">Rent</a>
+                    <a href="#" class="card-link review-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#reviewModal"
+                       data-house-name="Family Home"
+                       data-location="Suburbia Meadows">Review</a>
                 </div>
             </div>
         </div>
@@ -105,8 +133,17 @@
                     <li class="list-group-item" id="rent4">Rent: $1100/month</li>
                 </ul>
                 <div class="card-body">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#rentModal" class="card-link">Rent</a>
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#reviewModal" class="card-link">Review</a>
+                    <a href="#" class="card-link rent-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#rentModal"
+                       data-house-name="Luxury Penthouse"
+                       data-location="City Center"
+                       data-rent="$1100/month">Rent</a>
+                    <a href="#" class="card-link review-btn" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#reviewModal"
+                       data-house-name="Luxury Penthouse"
+                       data-location="City Center">Review</a>
                 </div>
             </div>
         </div>
@@ -117,23 +154,25 @@
 
 <!-- Rent Modal -->
 <div class="modal fade" id="rentModal" tabindex="-1" aria-labelledby="rentModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="rentModalLabel">Rent Property</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rentModalLabel">Rent Property</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-house-name"></p>
+                <p id="modal-location"></p>
+                <p id="modal-rent"></p>
+                <!-- Additional modal body content can be added here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="rented-btn">Rent it!</button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
 
 <!-- Review  Modal -->
 <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -144,18 +183,89 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <p id="modal-review-house-name"></p>
+        <p id="modal-review-location"></p>
+        <p>Write a review</p>
+        <textarea cols="50" rows="10"></textarea>
+        <!-- Additional modal body content can be added here -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-info" id="reviewed-btn">Review It!</button>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Tick Modal -->
+<div class="modal fade" id="tickModal" tabindex="-1" aria-labelledby="tickModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tickModalLabel">Success!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <i class="uil uil-check-circle" style="font-size: 70px; color: forestgreen;"></i>
+                <p>Successfully Done!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // jQuery example
+    $(document).ready(function () {
+        $('.rent-btn').click(function () {
+            var houseName = $(this).data('house-name');
+            var location = $(this).data('location');
+            var rent = $(this).data('rent');
 
+            // Set the modal content dynamically
+            $('#modal-house-name').text('House Name: ' + houseName);
+            $('#modal-location').text('Location: ' + location);
+            $('#modal-rent').text('Rent: ' + rent);
+
+            // Show the modal
+            $('#rentModal').modal('show');
+
+            // Use these values to perform actions or display in the modal
+            console.log('House Name:', houseName);
+            console.log('Location:', location);
+            console.log('Rent:', rent);
+        });
+
+        $('.review-btn').click(function () {
+            var houseName = $(this).data('house-name');
+            var location = $(this).data('location');
+
+            // Set the modal content dynamically
+            $('#modal-review-house-name').text('House Name: ' + houseName);
+            $('#modal-review-location').text('Location: ' + location);
+
+            // Show the modal
+            $('#reviewModal').modal('show');
+
+            // Use these values to perform actions or display in the modal
+            console.log('House Name:', houseName);
+            console.log('Location:', location);
+        });
+
+        $('#reviewed-btn').click(function () {
+            $('#tickModal').modal('show');
+        });
+
+        $('#rented-btn').click(function () {
+            $('#tickModal').modal('show');
+        });
+        
+    });
+
+</script>
 </body>
 </html>
